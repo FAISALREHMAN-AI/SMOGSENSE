@@ -1,0 +1,35 @@
+
+# Python virtual environments
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# Local backups
+*.bak
+*.before-premium.bak
+
+# Editor and operating system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Raw or large source datasets not needed to run the dashboard
+data/raw/
+
+# Local collected logs
+data/live/*.csv
+__pycache__/
+*.pyc
+.venv/

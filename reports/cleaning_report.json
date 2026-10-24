@@ -1,0 +1,38 @@
+{
+  "raw_rows": 1644,
+  "missing_calendar_days_added": 0,
+  "impossible_values_set_to_missing": {
+    "max_temp_f": 1,
+    "avg_temp_f": 0,
+    "min_temp_f": 0,
+    "max_wind_speed_mph": 6,
+    "avg_wind_speed_mph": 0,
+    "min_pressure_in_zero": 127
+  },
+  "weather_missing_before_fill": {
+    "temp_c": 0,
+    "humidity": 0,
+    "dew_point_c": 0,
+    "wind_kmh": 0,
+    "pressure_in": 127
+  },
+  "weather_missing_after_fill": {
+    "temp_c": 0,
+    "humidity": 0,
+    "dew_point_c": 0,
+    "wind_kmh": 0,
+    "pressure_in": 5
+  },
+  "aqi_missing_days": 221,
+  "aqi_missing_by_year": {
+    "2019": 4,
+    "2020": 1,
+    "2021": 74,
+    "2022": 115,
+    "2023": 27
+  },
+  "date_range": [
+    "2019-06-01",
+    "2023-11-30"
+  ]
+}

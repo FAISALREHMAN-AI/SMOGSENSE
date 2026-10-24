@@ -1,0 +1,148 @@
+{
+  "chosen_model": "RandomForest",
+  "chosen_on": "validation year 2022 (not on the test set)",
+  "features": [
+    "aqi",
+    "aqi_lag1",
+    "aqi_lag2",
+    "aqi_mean3",
+    "aqi_mean7",
+    "aqi_change",
+    "temp_c",
+    "humidity",
+    "dew_point_c",
+    "wind_kmh",
+    "pressure_in",
+    "temp_dew_gap",
+    "month_sin",
+    "month_cos",
+    "is_winter"
+  ],
+  "train_period": [
+    "2019-06-01",
+    "2022-12-30"
+  ],
+  "test_period": [
+    "2023-01-01",
+    "2023-11-29"
+  ],
+  "rows": {
+    "train": 1089,
+    "test": 301,
+    "test_winter": 74
+  },
+  "validation_mae": {
+    "Ridge": 32.891778588815406,
+    "RandomForest": 32.231189449188605,
+    "HistGradientBoosting": 33.5776027397865
+  },
+  "validation_baseline_mae": 34.40343347639485,
+  "test_results": {
+    "Tomorrow = today": {
+      "all_test_days": {
+        "mae": 29.159468438538205,
+        "exact_level": 0.5681063122923588,
+        "within_one_level": 0.9700996677740864
+      },
+      "winter_days": {
+        "mae": 45.891891891891895,
+        "exact_level": 0.6081081081081081,
+        "within_one_level": 0.9594594594594594
+      }
+    },
+    "Ridge": {
+      "all_test_days": {
+        "mae": 25.608725568124836,
+        "exact_level": 0.6112956810631229,
+        "within_one_level": 0.9933554817275747
+      },
+      "winter_days": {
+        "mae": 41.798845565722175,
+        "exact_level": 0.6756756756756757,
+        "within_one_level": 0.9864864864864865
+      }
+    },
+    "RandomForest": {
+      "all_test_days": {
+        "mae": 26.259311932591952,
+        "exact_level": 0.6179401993355482,
+        "within_one_level": 0.9833887043189369
+      },
+      "winter_days": {
+        "mae": 41.55092929013198,
+        "exact_level": 0.5945945945945946,
+        "within_one_level": 0.972972972972973
+      }
+    },
+    "HistGradientBoosting": {
+      "all_test_days": {
+        "mae": 26.542158558189303,
+        "exact_level": 0.5880398671096345,
+        "within_one_level": 0.9867109634551495
+      },
+      "winter_days": {
+        "mae": 43.310661371617314,
+        "exact_level": 0.6081081081081081,
+        "within_one_level": 0.972972972972973
+      }
+    }
+  },
+  "improvement_over_baseline_95ci_mae_points": {
+    "Ridge": {
+      "all": [
+        1.804731829489965,
+        5.248505340955885
+      ],
+      "winter": [
+        -1.2678513419471849,
+        9.681096261138773
+      ]
+    },
+    "RandomForest": {
+      "all": [
+        0.8683267107656525,
+        5.060041289287984
+      ],
+      "winter": [
+        -2.362946318972698,
+        10.961707419418897
+      ]
+    },
+    "HistGradientBoosting": {
+      "all": [
+        0.4016097486542101,
+        4.787692965583425
+      ],
+      "winter": [
+        -4.268821283119949,
+        9.933684925413576
+      ]
+    }
+  },
+  "permutation_importance_mae_increase": {
+    "aqi": 25.625,
+    "wind_kmh": 6.989,
+    "aqi_mean3": 1.627,
+    "aqi_mean7": 1.4,
+    "dew_point_c": 0.897,
+    "month_cos": 0.107,
+    "temp_c": 0.085,
+    "is_winter": 0.039,
+    "pressure_in": -0.051,
+    "aqi_lag1": -0.077,
+    "temp_dew_gap": -0.089,
+    "humidity": -0.109,
+    "month_sin": -0.117,
+    "aqi_change": -0.25,
+    "aqi_lag2": -0.27
+  },
+  "level_names": [
+    "Good",
+    "Moderate",
+    "Unhealthy for sensitive groups",
+    "Unhealthy",
+    "Very unhealthy",
+    "Hazardous"
+  ],
+  "note_winter": "Test winter days are Jan, Feb, Nov 2023 only (data ends 30 Nov 2023)."
+}
